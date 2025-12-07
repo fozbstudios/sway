@@ -304,7 +304,7 @@ static void set_fullscreen(struct sway_view *view, bool fullscreen) {
 		return;
 	}
 	struct wlr_xwayland_surface *surface = view->wlr_xwayland_surface;
-	wlr_xwayland_surface_set_fullscreen(surface, fullscreen);
+	wlr_xwayland_surface_set_maximized(surface, fullscreen);
 }
 
 static bool wants_floating(struct sway_view *view) {

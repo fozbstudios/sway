@@ -215,7 +215,8 @@ static void set_fullscreen(struct sway_view *view, bool fullscreen) {
 	if (xdg_shell_view_from_view(view) == NULL) {
 		return;
 	}
-	wlr_xdg_toplevel_set_fullscreen(view->wlr_xdg_toplevel, fullscreen);
+	wlr_xdg_toplevel_set_maximized(view->wlr_xdg_toplevel, fullscreen);
+//wlr_xdg_toplevel_set_fullscreen(view->wlr_xdg_toplevel, fullscreen);
 }
 
 static void set_resizing(struct sway_view *view, bool resizing) {
